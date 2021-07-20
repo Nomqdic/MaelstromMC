@@ -35,6 +35,7 @@ public class Main extends JavaPlugin {
         this.config.addDefault("XPMultip", 1);
         this.config.addDefault("Prefix", "&6&lMaelstrom");
 
+
         //Multipliers
         this.config.addDefault("HeadshotMultiplier", 1.5);
         this.config.addDefault("NoScopeMultiplier", 2.0);
