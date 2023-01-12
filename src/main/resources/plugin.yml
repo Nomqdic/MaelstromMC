@@ -2,8 +2,13 @@ main: me.nomadic.maelstrom.main.Main
 version: 1.0
 name: MaelstromCore
 depend:
-  - Crackshot
+  - CrackShot
 commands:
   stats:
     usage: /stats
     description: View Maelstrom Stats
+  maelstrom:
+    usage: /maelstrom
+  prestigeIcon:
+    usage: /prestigeIcon
+api-version: 1.16

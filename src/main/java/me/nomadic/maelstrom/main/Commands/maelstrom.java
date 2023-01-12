@@ -1,5 +1,6 @@
 package me.nomadic.maelstrom.main.Commands;
 
+import me.nomadic.maelstrom.main.Utils.Text;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -20,20 +21,22 @@ public class maelstrom implements CommandExecutor {
     public maelstrom() {
         this.config = this.plugin.getConfig();
     }
-    String prefix = ChatColor.translateAlternateColorCodes('&', (Objects.requireNonNull(config.getString("Prefix"))));
+
 
 
 
 
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
 
-        if (args.length > 1) {
+        String prefix = ChatColor.translateAlternateColorCodes('&', (Objects.requireNonNull(config.getString("Prefix"))));
+        if (args.length > 0) {
             if(args[0].equalsIgnoreCase("reload") ) {
 
+                sender.sendMessage(prefix + Text.color(" &7Reloaded Config"));
                 plugin.reloadConfig();
                 return true;
             }else if(args[0].equalsIgnoreCase("info")) {
-                sender.sendMessage(prefix + ChatColor.GRAY + " running version" + Bukkit.getVersion());
+                sender.sendMessage(prefix + ChatColor.GRAY + " running version 1.0");
                 sender.sendMessage(ChatColor.GOLD + "Created by " + ChatColor.AQUA + "Nomqdic_");
             }
         }
